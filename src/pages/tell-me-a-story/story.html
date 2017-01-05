@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Resume for {{myName}}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+
+  <h3>Here is what happened {{myName}}</h3>
+
+  <p>
+    Thank you for downloading the app.
+  </p>
+
+
+  <ion-card *ngFor="let item of list">
+    <img src={{item.img}} height="50%"/>
+    <ion-card-content>
+      <ion-card-title>
+        {{item.title}}
+      </ion-card-title>
+      <p>
+        {{item.description}}
+      </p>
+    </ion-card-content>
+  </ion-card>
+  <p>
+    <button ion-button full on-tap="onTap()" class="button">Test</button>
+  </p>
+  <p>
+    <button ion-button full on-tap="presentActionSheet()" class="button">action</button>
+  </p>
+</ion-content>
